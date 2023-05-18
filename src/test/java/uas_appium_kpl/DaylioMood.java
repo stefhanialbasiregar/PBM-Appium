@@ -31,13 +31,10 @@ public class DaylioMood {
 	
 	public static void setMoodActivity() throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "Galaxy A22");
+        capabilities.setCapability("deviceName", "Samsung A22");
         capabilities.setCapability("udid", "RR8RA01AXNH");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "13");
-        
-//        capabilities.setCapability("appPackage", "com.eco.notes.notepad.notebook.simplenote");
-//        capabilities.setCapability("appActivity", "com.eco.notes.notepad.notebook.simplenote.screens.start.StartActivity");
         
         capabilities.setCapability("appPackage", "net.daylio");
         capabilities.setCapability("appActivity", "net.daylio.activities.OverviewActivity");
@@ -93,6 +90,9 @@ public class DaylioMood {
         //halaman select mood
         //pilih mood 'good;
         driver.findElementById("net.daylio:id/btn_mood_good").click();
+        
+        //klik tombol save
+        driver.findElementById("net.daylio:id/button_bottom_save").click();
    
 	}
 
