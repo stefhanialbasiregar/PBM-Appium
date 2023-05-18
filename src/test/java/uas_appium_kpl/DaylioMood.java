@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class InstagramAutomatisasi {
+public class DaylioMood {
 	
 	static AppiumDriver driver;
 
@@ -20,7 +20,7 @@ public class InstagramAutomatisasi {
 		// TODO Auto-generated method stub
 		
 		try {
-			login();
+			setMoodActivity();
 		}catch(Exception exp) {
 			System.out.println(exp.getCause());
 			System.out.println(exp.getMessage());
@@ -29,7 +29,7 @@ public class InstagramAutomatisasi {
 
 	}
 	
-	public static void login() throws MalformedURLException {
+	public static void setMoodActivity() throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Galaxy A22");
         capabilities.setCapability("udid", "RR8RA01AXNH");
